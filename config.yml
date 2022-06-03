@@ -1,0 +1,4 @@
+---
+
+buffer_size: 10
+buffer_drain_interval: 5
