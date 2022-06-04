@@ -5,7 +5,6 @@ import (
 	"dataPipeline/internal/pipe"
 	"dataPipeline/internal/ringBuf"
 	"dataPipeline/pkg/logging"
-	"fmt"
 	"time"
 )
 
@@ -35,7 +34,7 @@ func  main()  {
 	for  {
 		select {
 		case data := <- chBufferInt:
-			fmt.Println("Полученные данные ...", data)
+			logger.Infof("Полученные данные ...%d", data)
 		case <- done:
 			return
 		}
